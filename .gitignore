@@ -2,3 +2,16 @@ node_modules/
 .env
 uploads/*
 !uploads/.gitkeep
+
+# Node
+node_modules/
+npm-debug.log*
+package-lock.json
+
+# Mountebank logs
+mountebank.log
+mb.pid
+
+# Sistema
+.DS_Store
+Thumbs.db

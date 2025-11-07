@@ -1,0 +1,87 @@
+{
+  "imposters": [
+    {
+      "port": 4545,
+      "protocol": "http",
+      "name": "LimpiezaPro Stubs",
+      "stubs": [
+        {
+          "predicates": [
+            { "equals": { "method": "GET", "path": "/api/categorias" } }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 200,
+                "headers": { "Content-Type": "application/json" },
+                "body": [
+                  { "id": 1, "nombre": "Hogar" },
+                  { "id": 2, "nombre": "Ropa" },
+                  { "id": 3, "nombre": "Electrónica" }
+                ]
+              }
+            }
+          ]
+        },
+
+        {
+          "predicates": [
+            { "equals": { "method": "GET", "path": "/api/productos" } },
+            { "exists": { "query": { "id": true } } },
+            { "equals": { "query": { "id": "1" } } }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 200,
+                "headers": { "Content-Type": "application/json" },
+                "body": { "id": 1, "nombre": "Detergente", "precio": 10.5, "id_categoria": 1, "stock": 50 }
+              }
+            }
+          ]
+        },
+        {
+          "predicates": [
+            { "equals": { "method": "GET", "path": "/api/productos" } }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 200,
+                "headers": { "Content-Type": "application/json" },
+                "body": [
+                  { "id": 1, "nombre": "Detergente", "precio": 10.5, "id_categoria": 1, "stock": 50 },
+                  { "id": 2, "nombre": "Escoba", "precio": 7.3, "id_categoria": 1, "stock": 30 },
+                  { "id": 3, "nombre": "Plancha", "precio": 99.9, "id_categoria": 3, "stock": 10 }
+                ]
+              }
+            }
+          ]
+        },
+
+        {
+          "predicates": [
+            { "equals": { "method": "POST", "path": "/api/pedidos" } }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 201,
+                "headers": { "Content-Type": "application/json" },
+                "body": {
+                  "message": "Pedido creado (stub)",
+                  "id_pedido": 101,
+                  "fecha": "2025-10-23T12:00:00Z",
+                  "total_pedido": 120.0,
+                  "detalles": [
+                    { "id_producto": 1, "cantidad": 2, "total": 21.0 }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
