@@ -1,11 +1,11 @@
-# 🧩 Stubs Mountebank - LimpiezaPro
+# Stubs Mountebank - LimpiezaPro
 
 ## Requisitos
 - Tener **Node.js** instalado.
 - Instalar **Mountebank** de forma global:
   ```bash
   npm install -g @mbtest/mountebank
-  
+
 Ejecución
 Dentro de la carpeta del proyecto, ejecuta en la terminal:
 
@@ -23,12 +23,11 @@ POST	http://localhost:4545/api/pedidos	Simula la creación de un pedido
 
 Prueba en Postman
 Abre Postman.
-
 Importa la colección:
-Mountebank_Stubs.postman_collection.json
-
+    Mountebank_Stubs.postman_collection.json
 Ejecuta las peticiones y verifica las respuestas simuladas.
 
 Autor: Adolf B.
-Proyecto: LimpiezaPro (Simulación Backend con Mountebank)
+
+
 
