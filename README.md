@@ -19,7 +19,7 @@ Método	Endpoint	Descripción
 GET	http://localhost:4545/api/categorias	Devuelve las categorías disponibles
 GET	http://localhost:4545/api/productos	Devuelve todos los productos
 GET	http://localhost:4545/api/productos?id=1	Devuelve el producto con id=1
-POST	http://localhost:4545/api/pedidos	Simula la creación de un pedido
+POST http://localhost:4545/api/pedidos	Simula la creación de un pedido
 
 Prueba en Postman
 Abre Postman.
@@ -28,6 +28,3 @@ Importa la colección:
 Ejecuta las peticiones y verifica las respuestas simuladas.
 
 Autor: Adolf B.
-
-
-
